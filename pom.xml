@@ -117,6 +117,12 @@
     <system>buildhive</system>
     <url>https://buildhive.cloudbees.com/job/gwt-maven-plugin/job/gwt-maven-plugin/</url>
   </ciManagement>
+  <distributionManagement>
+	<repository>
+		<id>syndatis</id>
+		<url>http://192.168.11.13:8080/nexus/content/repositories/releases</url>
+	</repository>
+</distributionManagement>
   <properties>
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
@@ -384,7 +390,7 @@
         </plugins>
       </build>
     </profile>
-    
+
     <profile>
       <id>linkcheck</id>
       <reporting>
@@ -427,7 +433,7 @@
           </plugin>
         </plugins>
       </build>
-    </profile>    
+    </profile>
   </profiles>
 
   <build>
@@ -538,7 +544,7 @@
       </snapshots>
     </repository>
   </repositories>
-  
+
   <pluginRepositories>
     <pluginRepository>
       <id>apache.snapshots</id>
